@@ -1,0 +1,21 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Produtos;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class ProdutosTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        Produtos::factory()->count(10)->create();
+    }
+}
