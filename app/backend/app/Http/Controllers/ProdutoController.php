@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produto;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Traits\ProdutoTrait;
 
@@ -18,7 +19,8 @@ class ProdutoController extends Controller
     public function index()
     {
         $produtos = Produto::all();
-        return response()->json($produtos);
+        $users = User::all();
+        return response()->json([$produtos, $users]);
     }
 
     public function store(Request $request)

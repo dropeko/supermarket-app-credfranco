@@ -19,7 +19,9 @@ class UsersTableSeeder extends Seeder
         $user = User::create([
           'name' => 'Jack Sparrow',
           'email' => 'jack@sparrow.com',
-          'password' => bcrypt('password')
+          'password' => 'password',
+          'is_manager' => true,
+          'points' => 400,
         ]);
 
         $user->createToken('JackSparrow')->plainTextToken;
