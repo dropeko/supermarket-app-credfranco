@@ -13,7 +13,7 @@ export const useAuth = ({ middleware } = {}) => {
   // User
   const { data: user, error, mutate } = useSWR('/api/v1/user',
   () => axios
-        .get('/api/v1/user')
+        .get('/api/user')
         .then(res => res.data.data)
         .catch(error => {
             if (error.response.status !== 409) 
@@ -26,18 +26,12 @@ export const useAuth = ({ middleware } = {}) => {
 
   // Login
   const login = async ({ setErrors, ...props }) => {
-    await csrf()
+    // await csrf()
 
-    setErrors([])
+    // setErrors([])
 
     axios
-        .post('/login', props)
-        .then(() => mutate() && router.push('/manager'))
-        .catch(error => {
-            if (error.response.status !== 422) throw error
-
-            setErrors(Object.values(error.response.data.errors).flat)
-        })
+        .post('/login', router.push('/manager'))
   }
 
   // Logout
