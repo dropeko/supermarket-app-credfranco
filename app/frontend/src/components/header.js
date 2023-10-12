@@ -15,14 +15,14 @@ export default function Header() {
     </h1>
 
     <h1 className="text-xl font-bold">SuperMarket App</h1>
-
-    <div className="flex items-center gap-3">
-      <Separator orientation="vertical" className="h-6" />
-      <Button variant="secondary">
-        <Github className="w-4 h-4 mr-2" />
-        <a href='https://github.com/dropeko' target='_blank'>GitHub</a>
-      </Button>
-    </div>
+    <a href='https://github.com/dropeko' target='_blank'>
+      <div className="flex items-center gap-3">
+        <Button variant="secondary">
+          <Github className="w-4 h-4 mr-2" />
+          GitHub
+        </Button>
+      </div>
+    </a>
     </header>
 
   )

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Github, ShoppingCartIcon, Computer } from 'lucide-react'
-import { Separator } from "../components/ui/separator"
-import { Button } from "../components/ui/button"
 import { useAuth } from '@/hooks/auth';
+import Header from "@/components/header";
+import Footer from '@/components/footer';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -35,33 +34,14 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="px-6 py-3 flex items-center justify-between border-b-2">
-
-        <h1 className="text-xl font-bold flex items-center">
-          <Computer 
-            className="w-4 h-4 mr-2"
-          />
-          PHCA.dev
-        </h1>
-
-        <h1 className="text-xl font-bold">SuperMarket App</h1>
-
-        <div className="flex items-center gap-3">
-          <Separator orientation="vertical" className="h-6" />
-          <Button variant="secondary">
-            <Github className="w-4 h-4 mr-2" />
-            <a href='https://github.com/dropeko' target='_blank'>GitHub</a>
-          </Button>
-        </div>
-      </header>
-
+      <Header />
 
       <main className="flex-1 p-6 flex gap-6 justify-center mt-40">
-        <div className='flex flex-col gap-4 border-white rounded-xl h-56 border justify-center p-4'>
+        <div className='flex flex-col gap-4 border-white rounded-xl h-56 border justify-center p-4 bg-gray-800'>
           <h2 className='flex justify-center text-xl'>Login:</h2>
-          <form onSubmit={handleSubmit} className=''>
+          <form onSubmit={handleSubmit} className='flex flex-col items-center'>
               <label className=''>
-                Usuário:
+                Email:
                 <input
                   type="email"
                   value={email}
@@ -82,18 +62,14 @@ export default function Login() {
                 />
               </label>
               <br />
-              <div className='flex flex-auto items-center justify-center rounded-xl border border-white mt-2'>
+              <div className='flex flex-auto items-center justify-center rounded-xl border border-white mt-2 w-full'>
                 <button type="submit" className=''>Entrar</button>
               </div>
             </form>
           </div>
         </main>
 
-      <footer className='flex justify-center'>
-        <span>
-          Desenvolvido com 💛 por PHCA.dev 
-        </span>
-      </footer>
+        <Footer />
     </div>
   )
 }

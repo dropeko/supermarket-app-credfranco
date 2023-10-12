@@ -30,6 +30,7 @@ export const useAuth = ({ middleware } = {}) => {
 
     // setErrors([])
 
+
     axios
         .post('/login', router.push('/manager'))
   }
