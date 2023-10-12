@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from '@/lib/axios';
 import Footer from '@/components/footer';
 import { Separator } from "../components/ui/separator"
+import { MenuIcon } from 'lucide-react'
 
 export default function Manager() {
   const [products, setProducts] = useState([]);
@@ -55,7 +56,10 @@ export default function Manager() {
       <Header />
       <div className='border border-white  flex flex-col items-center p-3'>
 
-        <h2 className="text-2xl mb-4">Area do Gerente</h2>
+        <div className='flex items-center justify-center mb-4'>
+          <h3 className="text-2xl mr-1">Area do Gerente</h3>
+          <MenuIcon className='h-6 w-6' />
+        </div>
         <Separator className="h-1 mb-4" />
 
         <div className='flex justify-around w-full'>
@@ -99,7 +103,7 @@ export default function Manager() {
                   value={novoProduto.nome}
                   onChange={handleProdutoChange}
                   required
-                  className="border rounded-xl p-1 text-black"
+                  className="border rounded-xl text-black p-2"
                 />
               </div>
 
@@ -112,7 +116,7 @@ export default function Manager() {
                   value={novoProduto.valor}
                   onChange={handleProdutoChange}
                   required
-                  className="border rounded-xl p-1 text-black"
+                  className="border rounded-xl p-2 text-black"
                 />
               </div>
 
@@ -125,7 +129,7 @@ export default function Manager() {
                   value={novoProduto.desconto}
                   onChange={handleProdutoChange}
                   required
-                  className="border rounded-xl p-1 text-black"
+                  className="border rounded-xl p-2 text-black"
                 />
               </div>
 
@@ -138,16 +142,17 @@ export default function Manager() {
                   value={novoProduto.pontos}
                   onChange={handleProdutoChange}
                   required
-                  className="border rounded-xl p-1 text-black"
+                  className="border rounded-xl p-2 text-black"
                 />
               </div>
-              
-              <button
-                type="submit"
-                className="px-4 py-2 bg-white text-black font-bold rounded-xl"
-              >
-                Cadastrar Produto
-              </button>
+              <div className='flex items-center justify-center'>
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-white text-black font-bold rounded-xl"
+                >
+                  Cadastrar Produto
+                </button>
+              </div>
             </form>
           </section>
         </div>

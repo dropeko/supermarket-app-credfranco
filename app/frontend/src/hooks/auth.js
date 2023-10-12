@@ -8,12 +8,12 @@ export const useAuth = ({ middleware } = {}) => {
   const router = useRouter();
 
   // Loading 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
   // User
-  const { data: user, error, mutate } = useSWR('/api/v1/user',
+  const { data: user, error, mutate } = useSWR('/manager',
   () => axios
-        .get('/api/user')
+        .get('/manager')
         .then(res => res.data.data)
         .catch(error => {
             if (error.response.status !== 409) 
@@ -30,9 +30,7 @@ export const useAuth = ({ middleware } = {}) => {
 
     // setErrors([])
 
-
-    axios
-        .post('/login', router.push('/manager'))
+    console.log(props);
   }
 
   // Logout

@@ -6,7 +6,7 @@ export default function Footer() {
       <h3>
         Desenvolvido por PHCA.dev
       </h3>
-      <Computer 
+      <Computer
           className="w-4 h-4 ml-1"
         /> 
   </footer>

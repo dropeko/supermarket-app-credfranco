@@ -96,7 +96,11 @@ export default function Client() {
             Trocar
           </button>
           {trocaRealizada && (
-            <p className="flex items-center border border-gray-500 rounded-xl p-2">Troca realizada com sucesso! Retire seu voucher no ato da próxima compra.</p>
+            <div className="flex flex-1 w-full items-center justify-center">
+              <p className="border border-gray-500 rounded-xl p-4">
+                Troca realizada com sucesso! Retire seu voucher no ato da próxima compra.
+              </p>
+            </div>
           )}
         </div>
       </div>

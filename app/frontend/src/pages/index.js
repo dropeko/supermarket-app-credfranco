@@ -13,7 +13,7 @@ export default function Home() {
           <div className="flex flex-col bg-gray-800 p-8 rounded-xl shadow-md items-center mb-40">
             <h1 className="text-4xl text-center mb-6 text-black bg-white rounded-xl w-full">Bem-vindo</h1>
             <div className="flex text-2xl text-center mb-4 items-center justify-center w-min rounded-xl">
-              <ShoppingBasket />
+              <ShoppingBasket className='h-10 w-10'/>
             </div>
             <p className="text-center text-white mb-4">
               Desafio Técnico - CREDFRANCO

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from "next/router"
 import { useAuth } from '@/hooks/auth';
 import Header from "@/components/header";
 import Footer from '@/components/footer';
@@ -7,6 +8,7 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login, isLoading, user } = useAuth({middleware: "guest"})
+  const router = useRouter();
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -24,10 +26,18 @@ export default function Login() {
     )
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(event);
     // Aqui você pode adicionar a lógica para enviar os dados do login para o servidor
     login({ email, password })
+  
+    if (email === 'jack@sparrow.com') {
+      router.push('/manager');
+    }
+    else {
+      router.push('/client')
+    }
   };
 
 
