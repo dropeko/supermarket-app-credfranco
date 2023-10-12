@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Produtos>
  */
-class ProdutosFactory extends Factory
+class ProdutoFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class ProdutosFactory extends Factory
     public function definition()
     {
         return [
-            'nome' => fake()->name(),
+            'nome' => 'Produto A ou B ou D ou etc...',
             'valor' => 100,
             'desconto' => 30,
             'pontos' => 15

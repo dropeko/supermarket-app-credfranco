@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ProdutoController;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
 });
+Route::get('/manager', [ProdutoController::class, 'index']);
+Route::get('/client', [ProdutoController::class, 'index']);
+Route::post('/manager', [ProdutoController::class, 'store']);
 
 require __DIR__.'/auth.php';
