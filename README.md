@@ -1,6 +1,6 @@
 # Supermercado Virtual
 
-Este é um projeto de um aplicativo de supermercado desenvolvido com as seguintes tecnologias:
+ _Este é um projeto desenvolvidor no processo seletivo da empresa CREDFRANCO. As tecnologias usadas no desenvolvimento foram:_
 
 ## Frontend
 - [JavaScript](https://https://www.javascript.com/)
