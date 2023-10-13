@@ -1,4 +1,4 @@
-# Documentação do Frontend
+# Documentação do Frontend 🚀
 
 ## Next.js
 
