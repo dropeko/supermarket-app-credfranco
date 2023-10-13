@@ -1,40 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Documentação do Frontend
 
-## Getting Started
+## Next.js
 
-First, run the development server:
+Next.js é um framework de desenvolvimento web front-end React de código aberto. Ele foi projetado para facilitar a construção de aplicativos da web modernos, fornecendo recursos como renderização do lado do servidor (SSR) e geração estática (SSG). O Next.js simplifica a criação de aplicativos com várias páginas, roteamento, otimização de desempenho e muito mais.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Recursos Principais
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Renderização no Lado do Servidor (SSR)**: O Next.js permite renderizar páginas no lado do servidor, melhorando o desempenho e a otimização para mecanismos de busca.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Geração Estática (SSG)**: Você pode pré-renderizar páginas no momento da construção, o que é ideal para conteúdo estático.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Roteamento Simplificado**: O Next.js oferece roteamento simples para criar aplicativos de várias páginas.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Suporte a CSS**: O Next.js é flexível em relação ao uso de diferentes estratégias para estilização, incluindo CSS global, módulos CSS, e integração fácil com bibliotecas de estilos como Tailwind CSS.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Recarregamento Rápido**: O ambiente de desenvolvimento oferece recarregamento rápido para uma experiência de desenvolvimento mais eficiente.
 
-## Learn More
+## Axios
 
-To learn more about Next.js, take a look at the following resources:
+Axios é uma biblioteca JavaScript que permite fazer solicitações HTTP a servidores. Ela simplifica a comunicação com APIs e recursos externos a partir do seu aplicativo.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Recursos Principais
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Simplicidade de Uso**: Axios fornece uma API simples e intuitiva para fazer solicitações HTTP.
 
-## Deploy on Vercel
+- **Suporte a Promessas**: Ele é baseado em Promessas, o que facilita o tratamento de solicitações assíncronas.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Suporte a Cancelamento de Solicitações**: Você pode cancelar solicitações em andamento, evitando vazamentos de recursos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Interceptores**: Axios permite adicionar interceptores para modificar solicitações ou respostas antes de serem enviadas ou processadas.
+
+- **Suporte a Diversos Navegadores**: Ele é compatível com a maioria dos navegadores modernos e pode ser usado tanto no navegador quanto no Node.js.
+
+## Tailwind CSS
+
+Tailwind CSS é um framework CSS altamente personalizável e de baixo nível que fornece classes utilitárias para criar rapidamente interfaces de usuário personalizadas. Ele se concentra em construir blocos de construção reutilizáveis para criar estilos de maneira eficiente.
+
+### Recursos Principais
+
+- **Classe Utilitárias**: O Tailwind CSS fornece uma ampla variedade de classes utilitárias que cobrem espaçamento, tipografia, cores, bordas, entre outros.
+
+- **Configuração Personalizável**: É altamente personalizável por meio de um arquivo de configuração. Você pode criar classes personalizadas para atender às suas necessidades específicas.
+
+- **Produtividade**: O uso de classes utilitárias reduz a necessidade de escrever CSS personalizado, acelerando o desenvolvimento.
+
+- **Flexibilidade**: É compatível com outras bibliotecas CSS e pode ser integrado facilmente a projetos existentes.
+
+---
+
+Este documento fornece uma visão geral das tecnologias e bibliotecas usadas neste projeto. Recomendo a leitura da documentação oficial do Next.js, Axios e Tailwind CSS para obter informações detalhadas sobre o uso e recursos específicos de cada uma delas.
